@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Glamrent - WebAR Showcase</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+    .scene {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to bottom, #000000, #333333);
+      position: relative;
+      perspective: 1000px;
+    }
+    .floating-image {
+      width: 240px;
+      animation: float 5s ease-in-out infinite;
+      transform-style: preserve-3d;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px) rotateY(0deg); }
+      50% { transform: translateY(-20px) rotateY(15deg); }
+      100% { transform: translateY(0px) rotateY(0deg); }
+    }
+    .caption {
+      position: absolute;
+      bottom: 20px;
+      color: white;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <img src="dress_1.png" alt="Dress 1" class="floating-image" style="left: -220px; position: absolute;">
+    <img src="dress_2.png" alt="Dress 2" class="floating-image">
+    <img src="dress_3.png" alt="Dress 3" class="floating-image" style="right: -220px; position: absolute;">
+    <div class="caption">👗 ลองดูแฟชั่นลุคฮิตแบบ AR จาก Glamrent!</div>
+  </div>
+</body>
+</html>
